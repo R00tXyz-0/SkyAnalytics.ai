@@ -25,7 +25,7 @@ response_R = requests.get(url_R)
 data_R = response_R.json()
 
 df_R = pd.DataFrame({
-    "time": date_R["hourly"]["time"],
+    "time": data_R["hourly"]["time"],
     "temperature": data_R["hourly"]["temperature_2m"],
     "humidity": data_R["hourly"]["relativehumidity_2m"],
     "precipitation": data_R["hourly"]["precipitation"],
